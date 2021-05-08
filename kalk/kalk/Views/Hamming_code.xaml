@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kalk.Views.ItemsPage"
+             Title="Kod Hamminga"
+             xmlns:local="clr-namespace:kalk.ViewModels"  
+             xmlns:model="clr-namespace:kalk.Models"  
+             x:Name="BrowseItemsPage"
+             BackgroundColor="Black">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackLayout Orientation="Vertical" Padding="5" Margin="0,20,0,0">
+                <Label Text="Wybierz rodzaj kodu Hamminga:" FontSize="20" Margin="5,0,0,0" TextColor="Red"/>
+                <StackLayout Margin="20,10,0,0">
+                    <RadioButton x:Name="btn_7_4" Content="Hamming 7_4" TextColor="Red"/>
+                    <RadioButton x:Name="btn_15_11" Content="Hamming 15_11" TextColor="Red"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="1" Margin="0,20,0,0">
+                <Entry Placeholder="Słowo Wejściowe" x:Name="hamming_data_in"/>
+                <Button x:Name="btn_encode" BorderColor="Red" BorderWidth="2" CornerRadius="15" Text="KODUJ" FontSize="20" Clicked="encode_7_4"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="1" Margin="0,70,0,0">
+                <Entry x:Name="hamming_data_out" IsReadOnly="True" Placeholder="Słowo Kodowe"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+
+    
+</ContentPage>
