@@ -117,30 +117,37 @@ namespace kalk
             int i = 0;
             string code_segment = null;
             string code = null;
-            while (i <= (input.Length - 1))
+            if (int.TryParse(input, out int result) == true) 
             {
+                while (i <= (input.Length - 1))
+                {
 
-                var bit = input[i];
+                    var bit = input[i];
 
-                if (localisation == "a")
-                {
-                    code_segment = a_code(bit);
+                    if (localisation == "a")
+                    {
+                        code_segment = a_code(bit);
+                    }
+                    else if (localisation == "b")
+                    {
+                        code_segment = b_code(bit);
+                    }
+                    else if (localisation == "c")
+                    {
+                        code_segment = c_code(bit);
+                    }
+                    else
+                    {
+                        code_segment = d_code(bit);
+                    }
+                    code = code + " " + code_segment;
+                    localisation = coder_localiser(code_segment);
+                    i++;
                 }
-                else if (localisation == "b")
-                {
-                    code_segment = b_code(bit);
-                }
-                else if (localisation == "c")
-                {
-                    code_segment = c_code(bit);
-                }
-                else
-                {
-                    code_segment = d_code(bit);
-                }
-                code = code + " " + code_segment;
-                localisation = coder_localiser(code_segment);
-                i++;
+            }
+            else
+            {
+                code = "wpisz poprawną wartość";
             }
             return code;
         }
