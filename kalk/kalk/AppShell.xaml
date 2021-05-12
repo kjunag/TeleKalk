@@ -92,6 +92,9 @@
     <FlyoutItem Title="Suma kontrolna">
         <ShellContent Route="Checksum" ContentTemplate="{DataTemplate local:Checksum}"/>
     </FlyoutItem>
+    <FlyoutItem Title="kod AMI">
+        <ShellContent Route="Ami_page" ContentTemplate="{DataTemplate local:AMI_page}"/>
+    </FlyoutItem>
     
 
 
