@@ -21,8 +21,15 @@ namespace kalk.Views
         {
             try
             {
-                Checksum_Methods.addToList(checksum_data_in.Text);
-                word_list_view.Items.Add(checksum_data_in.Text);
+                if (checksum_data_in.Text != null)
+                {
+                    Checksum_Methods.addToList(checksum_data_in.Text);
+                    word_list_view.Items.Add(checksum_data_in.Text);
+                }
+                else
+                {
+                    checksum_data_out.Text = "wartość nie może być pusta";
+                }
             }
             catch (FormatException)
             {

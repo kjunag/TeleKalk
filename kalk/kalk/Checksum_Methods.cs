@@ -11,8 +11,12 @@ namespace kalk
         static List<int> data = new List<int>();
         public static void addToList(string word_input)
         {
+            
+            
                 var word = int.Parse(word_input, NumberStyles.HexNumber);
                 data.Add(word);
+            
+
         }
 
         public static string CalcChecksum()

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="kalk.Views.Hamming_code"
              x:Name="hamming_code_page"
-             BackgroundColor="Black">
+             BackgroundColor="{AppThemeBinding Dark=Black, Light=White}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -28,7 +28,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackLayout Grid.Column="1" Margin="0,20,0,0">
-                <Entry Placeholder="Słowo Wejściowe" x:Name="hamming_data_in" Keyboard="Numeric"/>
+                <Entry Placeholder="Słowo Wejściowe" x:Name="hamming_data_in" Keyboard="Numeric" />
                 <Button x:Name="btn_encode" BorderColor="Red" BorderWidth="2" CornerRadius="15" Text="KODUJ" FontSize="20" Clicked="encode_7_4"/>
             </StackLayout>
         </Grid>

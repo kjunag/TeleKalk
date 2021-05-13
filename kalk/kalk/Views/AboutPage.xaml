@@ -4,7 +4,8 @@
              x:Class="kalk.Views.AboutPage"
              xmlns:vm="clr-namespace:kalk.ViewModels"
              Title="Tele Kalkulator"
-             BackgroundColor="Black">
+             
+             BackgroundColor="{AppThemeBinding Dark=Black, Light=White}">
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="kalk.Views.AMI_page"
              x:Name="AMI_code_page"
-             BackgroundColor="Black">
+             BackgroundColor="{AppThemeBinding Dark=Black, Light=White}"
+             >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

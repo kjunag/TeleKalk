@@ -26,7 +26,7 @@ namespace kalk
         {
             string output;
             int result;
-            if (input.Length == 11 && int.TryParse(input, out result) == true)
+            if (input.Length == 11)
             {
                 int p1;
                 int p2;
